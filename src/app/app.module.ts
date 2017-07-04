@@ -20,6 +20,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { EthComponent } from './eth/eth.component';
 import { BtcComponent } from './btc/btc.component';
+import { TimeApiService } from './services/time-api.service';
+import { CryptoApiService } from './services/crypto-api.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,7 @@ import { BtcComponent } from './btc/btc.component';
     MomentModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [TimeApiService, CryptoApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

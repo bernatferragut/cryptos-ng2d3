@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.getUpdate();
-   }  
+   }
 
    getUpdate() {
     this.bitCoinPrice = this._cryptoService.getBitcoinPrice()

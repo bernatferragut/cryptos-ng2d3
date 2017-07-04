@@ -10,7 +10,7 @@ import { routerTransition } from './../animations';
   templateUrl: './eth.component.html',
   styleUrls: ['./eth.component.css'],
   animations: [routerTransition],
-  host: {'[@routerTransition]':''}
+  host: { '[@routerTransition]': '' }
 })
 export class EthComponent implements OnInit {
 
