@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Aim
 
-An advanced graphic features for real time cryptocurrencies with ng2d3 
+An advanced graphic features for real time cryptocurrencies with [ng2d3](https://github.com/swimlane/ngx-charts)
 
 ## Development server
 
