@@ -1,0 +1,40 @@
+.divflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.23em; 
+    color: lightgrey;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em; 
+    align: center;
+}
+
+.button {
+    font-size: 0.5em;   
+    color: white;
+    background-color:  black
+}
+
+.svg {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#high {
+    color: palegoldenrod;
+}
+
+#last {
+    color: orangered;
+}
+
+#low {
+    color: paleturquoise;
+}

@@ -1,0 +1,8 @@
+<md-toolbar class="navbar">
+  <span class="spacer"></span>
+  <button class="button" md-button (click)="goHOME()"> HOME </button>
+  <button class="button" md-button (click)="goBTC()"> BTC </button>
+  <!--<button md-button (click)="goETH()"> ETH </button> -->
+  <button class="button" md-button [routerLink]="['eth']"> ETH </button>
+  <span class="spacer"></span>
+</md-toolbar>

@@ -1,0 +1,31 @@
+<!--CRYPTOS HTML MAIN APP-->
+
+<h1 class="divflex" id="title">
+  BITCOIN & ETHEREUM
+</h1>
+
+<div class="divflex">
+  <img src="../../assets/images/intro.svg">
+</div>
+
+<h1 class="divflex" id="date">
+  {{ bitCoinPrice?.timestamp | amFromUnix | amDateFormat:'hh:mmA | LL' }} 
+</h1>
+
+<h1 class="divflex">
+  BTC: {{ bitCoinPrice?.last }} $
+</h1>
+
+<h1 class="divflex">
+  ETH: {{ etherPrice?.data?.price?.usd }} $
+</h1>
+
+<div class="divflex">
+  <button 
+    md-fab
+    (click)="getUpdate()"
+    class="button">
+    <md-icon>update</md-icon>
+  </button>
+</div>
+
