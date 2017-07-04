@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
 
-# Aim
+## Aim
 
 An advanced graphic features for real time cryptocurrencies with ng2d3 
 
