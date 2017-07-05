@@ -5,27 +5,25 @@
 </div>
 
 <h1 class="divflex">
-  Timestamp: {{ bitCoinPrice?.timestamp | amFromUnix | amDateFormat:'hh:mmA' }} $ 
+    {{ currentDateTime?.timestamp | amFromUnix | amDateFormat:'LL' }} |
+    {{ currentDateTime?.timestamp | amFromUnix | amDateFormat:'hh:mmA' }} 
+</h1>
+
+<h1 class="divflex" id="symbol">
+  {{ bitCoinPrice?.Data?.AggregatedData?.FROMSYMBOL  }} > USD$ 
 </h1>
 
 <h1 class="divflex" id="high">
-  High: {{ bitCoinPrice?.high }} $
+  High 24 hours: {{ bitCoinPrice?.Data?.AggregatedData?.HIGH24HOUR }} $
 </h1>
 
 <h1 class="divflex" id="last">
-  Last: {{ bitCoinPrice?.last }} $
+  Open 24 hours: {{  bitCoinPrice?.Data?.AggregatedData?.OPEN24HOUR }} $
 </h1>
 
 <h1 class="divflex" id="low">
-  Low: {{ bitCoinPrice?.low }} $
+  Low 24 hours: {{ bitCoinPrice?.Data?.AggregatedData?.LOW24HOUR }} $
 </h1>
 
-<h1 class="divflex">
-  Volume: {{ bitCoinPrice?.volume | number : '1.2-2' }} $ 
-</h1>
-
-<h1 class="divflex">
-  Bid: {{ bitCoinPrice?.bid }} $ 
-</h1>
 
 

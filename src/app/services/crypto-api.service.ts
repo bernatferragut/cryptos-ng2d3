@@ -11,33 +11,49 @@ export class CryptoApiService {
    // 1.Simple way of creating a http observable
 
   getBitcoinPrice() {
-    return this._http.get('https://www.bitstamp.net/api/ticker')
+    return this._http.get('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=BTC,USD,EUR')
     .map( (res: Response) => res.json() );
   }
 
+    // 2.Creating a http observable every x interval of time
+  getBitcoinGeneralInfo = () => {
+    return Observable
+      .interval(30 * 1000)
+      .startWith(0)
+      .flatMap((i) => this._http.get('https://www.cryptocompare.com/api/data/coinsnapshot/?fsym=BTC&tsym=USD'))
+      .map( (res: Response) => res.json() )
+      .do(res => console.log(res));
+  }
+///////////////////////////////////////////////////////////////////////////////////////////////
+
   getEthereumPrice() {
-    return this._http.get('https://etherchain.org/api/basic_stats').map( (res: Response) => res.json() );
+    return this._http.get('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=ETH,USD,EUR')
+    .map( (res: Response) => res.json() );
   }
 
-  // 2.Creating a http observable every x interval of time
-  
-  getBitcoinPrice2 = () => {
+  getEtherGeneralInfo = () => {
     return Observable
       .interval(30 * 1000)
       .startWith(0)
-      .flatMap((i) => this._http.get('https://www.bitstamp.net/api/ticker'))
+      .flatMap((i) => this._http.get('https://www.cryptocompare.com/api/data/coinsnapshot/?fsym=ETH&tsym=USD'))
       .map( (res: Response) => res.json() )
       .do(res => console.log(res));
   }
 
-    getEthereumPrice2 = () => {
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+  getDashPrice() {
+    return this._http.get('https://min-api.cryptocompare.com/data/price?fsym=DASH&tsyms=DASH,USD,EUR')
+    .map( (res: Response) => res.json() );
+  }
+
+  getDashGeneralInfo = () => {
     return Observable
       .interval(30 * 1000)
       .startWith(0)
-      .flatMap((i) => this._http.get('https://etherchain.org/api/basic_stats'))
+      .flatMap((i) => this._http.get('https://www.cryptocompare.com/api/data/coinsnapshot/?fsym=DASH&tsym=USD'))
       .map( (res: Response) => res.json() )
       .do(res => console.log(res));
   }
 
-  // 3. Other Data from BTC
 }

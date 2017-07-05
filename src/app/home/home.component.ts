@@ -15,10 +15,10 @@ import { routerTransition } from './../animations';
 })
 export class HomeComponent implements OnInit {
 
-  currentDate: any;
-  currentTime: any;
+  currentDateTime: any;
   bitCoinPrice: any;
   etherPrice: any;
+  dashPrice: any;
 
   constructor(  private _timeApiService: TimeApiService,
                 private _cryptoService: CryptoApiService ) { }
@@ -34,11 +34,12 @@ export class HomeComponent implements OnInit {
     this.etherPrice = this._cryptoService.getEthereumPrice()
       .subscribe((res) => this.etherPrice = res);
 
-    this.currentDate = this._timeApiService.getDateTime()
-      .subscribe( res => this.currentDate = res.date);
+    this.dashPrice = this._cryptoService.getDashPrice()
+      .subscribe((res) => this.dashPrice = res);
 
-    this.currentTime = this._timeApiService.getDateTime()
-      .subscribe( res => this.currentTime = res.time);
+    this.currentDateTime = this._timeApiService.getDateTime()
+      .subscribe( res => this.currentDateTime = res);
+
    }
 
 }

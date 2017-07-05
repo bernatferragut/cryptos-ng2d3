@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     font-size: 1.23em; 
-    color: lightgrey;
+    color: lightgray;
 }
 
 .title {
@@ -17,24 +17,29 @@
 .button {
     font-size: 0.5em;   
     color: white;
-    background-color:  black
+    background-color:  black 
 }
 
 .svg {
-    padding: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0px;
+    padding: 10px;
 }
 
 #high {
-    color: palegoldenrod;
+    color: orangered;
 }
 
 #last {
-    color: orangered;
+    color: palegreen;
 }
 
 #low {
     color: paleturquoise;
+}
+
+#symbol {
+    color: lightblue;
 }

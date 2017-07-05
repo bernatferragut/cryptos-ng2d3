@@ -1,7 +1,7 @@
 <!--CRYPTOS HTML MAIN APP-->
 
 <h1 class="divflex" id="title">
-  BITCOIN & ETHEREUM
+  BLOCKCHAIN | CURRENCIES
 </h1>
 
 <div class="divflex">
@@ -9,15 +9,20 @@
 </div>
 
 <h1 class="divflex" id="date">
-  {{ bitCoinPrice?.timestamp | amFromUnix | amDateFormat:'hh:mmA | LL' }} 
+  {{ currentDateTime?.timestamp | amFromUnix | amDateFormat:'LL' }} |
+  {{ currentDateTime?.timestamp | amFromUnix | amDateFormat:'hh:mmA' }} 
 </h1>
 
 <h1 class="divflex">
-  BTC: {{ bitCoinPrice?.last }} $
+  BTC: {{ bitCoinPrice?.USD }} $
 </h1>
 
 <h1 class="divflex">
-  ETH: {{ etherPrice?.data?.price?.usd }} $
+  ETH: {{ etherPrice?.USD }} $
+</h1>
+
+<h1 class="divflex">
+  DASH: {{ dashPrice?.USD }} $
 </h1>
 
 <div class="divflex">

@@ -14,22 +14,22 @@ import { routerTransition } from './../animations';
 })
 export class EthComponent implements OnInit {
 
-
-  bitCoinPrice: any;
+  currentDateTime: any;
   etherPrice: any;
 
-  constructor( private _cryptoService: CryptoApiService ) { }
+  constructor(  private _timeApiService: TimeApiService,
+                private _cryptoService: CryptoApiService ) { }
 
   ngOnInit() {
     this.getUpdate();
    }
 
    getUpdate() {
-    this.bitCoinPrice = this._cryptoService.getBitcoinPrice()
-      .subscribe((res) => this.bitCoinPrice = res);
-
-    this.etherPrice = this._cryptoService.getEthereumPrice()
+    this.etherPrice = this._cryptoService.getEtherGeneralInfo()
       .subscribe((res) => this.etherPrice = res);
-  }
+ 
+    this.currentDateTime = this._timeApiService.getDateTime()
+      .subscribe( res => this.currentDateTime = res);
+     }
 }
 

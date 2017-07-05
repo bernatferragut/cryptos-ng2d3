@@ -12,17 +12,9 @@ export class TimeApiService {
    // 1.Simple way of creating a http observable
 
     getDateTime() {
-    return this._http.get('http://date.jsontest.com/').map( (res: Response) => res.json() );
+    return this._http.get('https://www.bitstamp.net/api/ticker')
+      .map( (res: Response) => res.json() );
   }
 
-    // 2.Creating a http observable every x interval of time
-
-    getDateTime2 = () => {
-    return Observable
-      .interval(1 * 1000)
-      .startWith(0)
-      .flatMap((i) => this._http.get('http://date.jsontest.com/'))
-      .map( (res: Response) => res.json() )
-      .do(res => console.log(res));
-  }
 }
+
