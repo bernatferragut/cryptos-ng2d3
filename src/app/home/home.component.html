@@ -1,36 +1,33 @@
 <!--CRYPTOS HTML MAIN APP-->
+<div class="container">
+  <h1 class="divflex" id="title">
+    BLOCKCHAIN
+  </h1>
 
-<h1 class="divflex" id="title">
-  BLOCKCHAIN | CURRENCIES
-</h1>
+  <div class="divflex">
+    <img id="intro" src="../../assets/images/intro.svg">
+  </div>
 
-<div class="divflex">
-  <img src="../../assets/images/intro.svg">
-</div>
+  <h1 class="divflex" id="date">
+    {{ currentDateTime?.timestamp | amFromUnix | amDateFormat:'LL' }} | {{ currentDateTime?.timestamp | amFromUnix | amDateFormat:'hh:mmA'
+    }}
+  </h1>
 
-<h1 class="divflex" id="date">
-  {{ currentDateTime?.timestamp | amFromUnix | amDateFormat:'LL' }} |
-  {{ currentDateTime?.timestamp | amFromUnix | amDateFormat:'hh:mmA' }} 
-</h1>
+  <h1 class="divflex">
+    BTC: {{ bitCoinPrice?.USD }} $
+  </h1>
 
-<h1 class="divflex">
-  BTC: {{ bitCoinPrice?.USD }} $
-</h1>
+  <h1 class="divflex">
+    ETH: {{ etherPrice?.USD }} $
+  </h1>
 
-<h1 class="divflex">
-  ETH: {{ etherPrice?.USD }} $
-</h1>
+  <h1 class="divflex">
+    DASH: {{ dashPrice?.USD }} $
+  </h1>
 
-<h1 class="divflex">
-  DASH: {{ dashPrice?.USD }} $
-</h1>
-
-<div class="divflex">
-  <button 
-    md-fab
-    (click)="getUpdate()"
-    class="button">
+  <div class="divflex">
+    <button md-fab (click)="getUpdate()" class="button">
     <md-icon>update</md-icon>
   </button>
+  </div>
 </div>
-

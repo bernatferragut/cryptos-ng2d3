@@ -1,12 +1,16 @@
+
+.divflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .spacer {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
 }
 
-.maintitle {
-    font-family: 'Montserrat Subrayada', sans-serif, 700;
-}
 
 .navbar {
     background-color:black;
@@ -17,23 +21,6 @@
 }
 
 button {
-    color: lightblue
-}
-
-/* Media Query max width 640px, mobile only styles*/
-@media only screen and (max-width: 40em) {
-
-}
-
-/* Media Query max width 1025px, mobile only styles*/
-@media only screen and (min-width: 64.063em) { 
-    .button {
-        font-size: 1em;
-    }
-
-}
-
-/* Media Query max width 1025px, mobile only styles*/
-@media only screen and (max-width: 64.063em) {
-
+    color: lightblue;
+    font-size: .9em;
 }
